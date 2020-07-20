@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Access the database</title>
+
+	<link rel="stylesheet" href="styles.css" />
+	
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	
+	
+	
+<script>
+	     
+		var request = new XMLHttpRequest();
+		
+		
+		request.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			       
+				var response = request.response;
+		        var parsedData = JSON.parse(response);
+				var demos = document.getElementById("demo");
+			
+				for(item in parsedData){
+					var name = parsedData[item];
+					
+					for(let i=0; i <= parsedData[item].length; i++){
+						var members = document.createElement("div");
+						
+						 members.innerHTML = 
+						 "<div class='holder'> <img src ='"
+						 + name[i].image + " ' width='250px'/> "  + " <br>"
+					    + name[i].character + " <br>"
+						+ name[i].Age + " <br>"
+						+ name[i].Profession;
+						
+						
+						demos.appendChild(members);
+					}
+					
+					
+					
+				      }
+				
+				
+			}
+ 		}
+		
+		request.open('GET', "members.json", true);
+		request.send();
+		
+	</script>
+</head>
+
+<body>
+	<div class="container">
+	   <div class="row">
+		  <div class="col-lg-2">jkjnjknjnkjn</div>
+		   <div class="col-lg-8">
+		       <div id="demo"></div>
+		   </div>
+		</div>
+	</div>
+
+	
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Access the database</title>
+
+	<link rel="stylesheet" href="styles.css" />
+	
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	
+	
+	
+<script>
+$(document).ready(function(){
+  
+    $.getJSON("members.json", function(response){
+		
+		var output = '<ul>';
+		$.each(response, function(key, val){
+			
+			
+			output += '<li>';
+			output += '<h2><img src="' + val.image + ' " width="250px"></h2>';
+			output += '<h2>' + val.character + '</h2>';
+			output += '<h2>' + val.Profession + '</h2>';
+			output += '<h2>' + val.Age + '</h2>';
+			output += '</li>';
+		    
+		
+		});
+		
+		
+		output += '</ul>';
+		$('#demo').html(output);
+		
+		 });
+	});	
+		
+		
+    /*loop thru items and do somethin with them*/	
+				
+	/*	$.each(response, function(key, val){
+			   
+		                var members = document.createElement("div");
+						
+						members.innerHTML = 
+						"<div class='holder'> <img src ='"
+						+ val.image + "' width='250px'>"
+					    + val.character + " <br>"
+						+ val.Age + " <br>"
+						+ val.Profession;
+						
+						$("#demo").html(members);
+					             
+				});*/
+		
+      
+
+
+</script>
+	
+	
+</head>
+
+<body>
+	<div class="container">
+	   <div class="row">
+		  <div class="col-lg-2">jkjnjknjnkjn</div>
+		   <div class="col-lg-8">
+			   <div class="main-holder">  <div id="demo"></div></div>
+		     
+		   </div>
+		</div>
+	</div>
+
+	
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,1 @@
+gsap.to(".logo", {duration:4, y:100, x:50, opacity:1, height:'200%', rotationY:360, ease: "bounce", });

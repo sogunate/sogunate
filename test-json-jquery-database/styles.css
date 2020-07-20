@@ -1,0 +1,26 @@
+.holder {
+			
+	display:flex;
+			flex-direction: row;
+			  background-color:gray;
+			  justify-content: flex-start;
+			align-items:center;
+			align-content: center;
+	padding:20px;
+		}
+		.holder >img {
+			
+			padding-right:10px;
+			margin-bottom:20px;
+			padding-left:20px;
+		}
+		
+		.demo{
+			display:flex;
+			  justify-content:center;
+		}
+.main-holder{
+	display: flex;
+	justify-content: center;
+	padding:20px;
+}

@@ -1,0 +1,24 @@
+{
+	 "characters" : [
+		{
+			"image": "images/spiderman.png",
+			"character": "Spider Man",
+			"Profession": "Stopping Bad Guys, and shooting web. ",
+			"Age": "37"
+		},
+		{
+			"image": "images/sephiroth.png",
+			"character": "Sephiroth",
+			"Profession": "Trying to take over the world.",
+			"Age": "30"
+		},
+		 {
+			"image": "images/optimus.png",
+			"character": "Optimus Prime",
+			"Profession": "Beating up decepticons",
+			"Age": "1000"
+		}
+	
+	]
+	
+}
